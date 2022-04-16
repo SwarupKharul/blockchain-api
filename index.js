@@ -1,7 +1,9 @@
 const express = require('express')
 const minter = require('./minter')
 const getTotal = require('./totsupply')
+var cors = require('cors')
 const app = express()
+app.use(cors())
 const port = 3000
 
 app.get('/', (req, res) => {
